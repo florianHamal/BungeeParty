@@ -1,0 +1,4 @@
+name: Bungeeparty
+version: '${project.version}'
+main: at.flori4n.bungeeparty.Bungeeparty
+description: Bungeeparty
