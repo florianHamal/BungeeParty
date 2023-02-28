@@ -5,7 +5,6 @@ import net.md_5.bungee.api.event.PlayerDisconnectEvent;
 import net.md_5.bungee.api.event.PostLoginEvent;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.event.EventHandler;
-import sun.jvm.hotspot.gc.parallel.PSYoungGen;
 
 public class Listeners implements Listener {
     @EventHandler

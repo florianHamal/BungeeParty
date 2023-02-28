@@ -14,6 +14,14 @@ public class PartyCommand extends Command {
     public void execute(CommandSender sender, String[] args) {
         ProxiedPlayer proxiedPlayer = ProxyServer.getInstance().getPlayer(sender.getName());
         PartyData.getInstance().setPartyLeader(proxiedPlayer);
-        ProxyServer.getInstance().getPlayers().forEach(p ->{p.connect(proxiedPlayer.getReconnectServer());});
+        ProxyServer.getInstance().getPlayers().forEach(p ->{
+            System.out.println(p.getName());
+            try {
+                p.connect(proxiedPlayer.getServer().getInfo());
+            }catch (Exception e){
+                System.out.println("ex "+p.getName());
+            }
+        });
+        System.out.println(proxiedPlayer.getServer().getInfo());
     }
 }
